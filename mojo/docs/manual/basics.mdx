@@ -160,8 +160,8 @@ The `fn` declaration has a few restrictions that a `def` declaration doesn't:
   `raises` keyword:
 
   ```mojo
-  fn greet(name: String) raises:
-      if (name == ""):
+  fn greet(name: String) raises -> String:
+      if name == "":
           raise Error("Name is empty")
       return "Hello, " + name + "!"
   ```
